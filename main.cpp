@@ -5,7 +5,11 @@
 #include <ctime>
 #include <functional>
 
+#include "Circle.h"
+#include "Rectangle.h"
+
 int main(int argc, const char* argv[]) {
+
 
 	return 0;
 }
