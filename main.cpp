@@ -5,15 +5,48 @@
 #include <ctime>
 #include <functional>
 
-#include "MyMath.h"
+#include "Mercury.h"
+#include "Earth.h"
+#include "Jupiter.h"
+#include "Mars.h"
+#include "Saturn.h"
+#include "Venus.h"
 
 int main(int argc, const char* argv[]) {
-	MyMath<int> b1(10, 20);
-	MyMath<float> b2(10.0f, 20.0f);
-	MyMath<double> b3(10.0, 20.0);
+	SolarSystemPlanet* planet[6];
+	const int kMaxPlanet = 6;
 
-	printf("<int> 大きいのは %d\n", b1.Min());
-	printf("<float> 大きいのは %f\n", b2.Min());
-	printf("<double> 大きいのは %lf\n", b3.Min());
+	for (int i = 0; i < kMaxPlanet; ++i) {
+		if (i == 0) {
+			planet[i] = new Mercury;
+		}
+		else if (i == 1) {
+			planet[i] = new Venus;
+		}
+		else if (i == 2) {
+			planet[i] = new Earth;
+		}
+		else if (i == 3) {
+			planet[i] = new Mars;
+		}
+		else if (i == 4) {
+			planet[i] = new Jupiter;
+		}
+		else if (i == 5) {
+			planet[i] = new Saturn;
+		}
+		else {
+			planet[i] = new Earth;
+		}
+	}
+
+	for (int i = 0; i < kMaxPlanet; ++i) {
+		planet[i]->PlanetName();
+	}
+
+	for (int i = 0; i < kMaxPlanet; ++i) {
+		delete planet[i];
+	}
+
 	return 0;
 }

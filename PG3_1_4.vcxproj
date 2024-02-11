@@ -19,13 +19,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Earth.cpp" />
+    <ClCompile Include="Jupiter.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MyMath.cpp" />
+    <ClCompile Include="Mars.cpp" />
+    <ClCompile Include="Mercury.cpp" />
+    <ClCompile Include="Saturn.cpp" />
+    <ClCompile Include="SolarSystemPlanet.cpp" />
+    <ClCompile Include="Venus.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="MyMath.h" />
+    <ClInclude Include="Earth.h" />
+    <ClInclude Include="Jupiter.h" />
+    <ClInclude Include="Mars.h" />
+    <ClInclude Include="Mercury.h" />
+    <ClInclude Include="Saturn.h" />
+    <ClInclude Include="SolarSystemPlanet.h" />
+    <ClInclude Include="Venus.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
