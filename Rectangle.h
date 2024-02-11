@@ -1,14 +1,14 @@
 #pragma once
 #include "IShape.h"
 
-class Rectangle : IShape
+class RectangleShape : IShape
 {
 private:
 	struct RectangleSize {
-		float leftTop;
-		float rightTop;
-		float leftBottom;
-		float rightBottom;
+		Vector2 leftTop;
+		Vector2 rightTop;
+		Vector2 leftBottom;
+		Vector2 rightBottom;
 	};
 
 public:
@@ -16,7 +16,12 @@ public:
 	void Draw() override;
 
 private:
-	RectangleSize rectangle_;
+	RectangleSize rectangle_ = {
+		{1.0f,2.0f},
+		{2.0f,2.0f},
+		{1.0f,1.0f},
+		{2.0f,2.0f}
+	};
 	float result_ = 0;
 };
 

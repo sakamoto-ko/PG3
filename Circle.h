@@ -14,7 +14,9 @@ public:
 
 private:
 	const float PI = 3.14f;
-	CircleSize circle_;
+	CircleSize circle_ = {
+		2.0f
+	};
 	float result_ = 0;
 };
 
