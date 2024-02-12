@@ -1,24 +1,24 @@
 #pragma once
-template <typename T>
+template <typename T1, typename T2>
 
 class MyMath
 {
 public:
-	T a;
-	T b;
+	T1 a;
+	T2 b;
 
-	MyMath(T a, T b) : a(a), b(b) {}
+	MyMath(T1 a, T2 b) : a(a), b(b) {}
 
-	T Min();
+	T1 Min();
 };
 
-template<typename T>
-inline T MyMath<T>::Min()
+template<typename T1, typename T2>
+inline T1 MyMath<T1, T2>::Min()
 {
 	if (a >= b) {
-		return static_cast<T>(a);
+		return static_cast<T1>(a);
 	}
 	else if (a < b) {
-		return static_cast<T>(b);
+		return static_cast<T1>(b);
 	}
 }
