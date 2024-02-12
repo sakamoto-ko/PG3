@@ -18,12 +18,40 @@ int main(int argc, const char* argv[]) {
 	"Tamachi","Hamamatsucho","Shinbashi","Yurakucho"
 	};
 
+	const char* stationName = "Tokyo";
+
+	printf("1970\n");
 	for (auto itr = lst.begin(); itr != lst.end(); ++itr) {
-		if (*itr == "Nippori") {
-			itr = lst.insert("Nishi-Nippori", "Nippori");
+		stationName = *itr;
+		printf("%s\n", stationName);
+	}
+	printf("\n");
+
+	printf("2019\n");
+	for (auto itr = lst.begin(); itr != lst.end(); ++itr) {
+		if (*itr == "Tabata") {
+			itr = lst.insert(itr, "Nishi-Nippori");
+			stationName = *itr;
+			printf("%s\n", stationName);
 			++itr;
 		}
+		stationName = *itr;
+		printf("%s\n", stationName);
 	}
+	printf("\n");
+
+	printf("2022\n");
+	for (auto itr = lst.begin(); itr != lst.end(); ++itr) {
+		if (*itr == "Tamachi") {
+			itr = lst.insert(itr, "Takanawa-Gateway");
+			stationName = *itr;
+			printf("%s\n", stationName);
+			++itr;
+		}
+		stationName = *itr;
+		printf("%s\n", stationName);
+	}
+	printf("\n");
 
 	return 0;
 }
